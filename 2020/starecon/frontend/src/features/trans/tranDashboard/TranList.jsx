@@ -1,8 +1,8 @@
 import React from "react";
 import { Segment, Header } from "semantic-ui-react";
-import TransListItem from "./TransListItem";
+import TranListItem from "./TranListItem";
 
-export default function TransList({ trans }) {
+export default function TranList({ trans, selectTran, deleteTran }) {
   return (
     <Segment.Group>
       <Segment>
@@ -22,7 +22,12 @@ export default function TransList({ trans }) {
           </thead>
           <tbody>
             {trans.map((tran) => (
-              <TransListItem recon={tran} key={tran.id} />
+              <TranListItem
+                tran={tran}
+                key={tran.id}
+                selectTran={selectTran}
+                deleteTran={deleteTran}
+              />
             ))}
           </tbody>
         </table>

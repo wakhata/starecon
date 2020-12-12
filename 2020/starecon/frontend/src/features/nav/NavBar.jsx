@@ -13,7 +13,7 @@ export default function NavBar({ setFormOpen }) {
             onClick={() => setFormOpen(true)}
             positive
             inverted
-            content='New Vote'
+            content='New Transaction'
           />
         </Menu.Item>
         <Menu.Item position='right'>
